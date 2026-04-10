@@ -14,7 +14,7 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <form class="container">
+    <form class="container" novalidate>
       <div class="message-success">
         <div>
           <img src="./assets/images/icon-success-check.svg" alt="success" />
@@ -27,40 +27,43 @@
         <div class="card-first-name">
           <label for="first-name">First Name <span>*</span></label>
           <input type="text" id="first-name" name="first-name" required />
-          <p>This field is required</p>
+          <p class="text-error">This field is required</p>
         </div>
         <div class="card-last-name">
           <label for="last-name">Last Name <span>*</span></label>
           <input type="text" id="last-name" name="last-name" required />
-          <p>This field is required</p>
+          <p class="text-error">This field is required</p>
         </div>
       </div>
       <label for="email">Email Address<span> *</span></label>
-      <input type="email" id="email" name="email" required />
-      <p>Please enter a valid email address</p>
+      <input type="email" id="email" name="email" />
+      <p class="text-error">Please enter a valid email address</p>
       <h2>Query Type <span>*</span></h2>
       <div class="card-radio">
         <div class="card-radio-left">
-          <input type="radio" id="radio-left" name="radio" required />
+          <input type="radio" id="radio-left" name="radio" />
           <label for="radio-left">General Enquiry</label>
         </div>
         <div class="card-radio-right">
-          <input type="radio" id="radio-right" name="radio" required />
+          <input type="radio" id="radio-right" name="radio" />
           <label for="radio-right">Support Request</label>
         </div>
       </div>
-      <p class="p-radio">Please select a query type</p>
+      <p class="text-error p-radio">Please select a query type</p>
       <h2 class="text-message">Message <span>*</span></h2>
       <textarea type="text" id="message" name="message"></textarea>
-      <p class="p-message">This field is required</p>
+      <p class="text-error p-message">This field is required</p>
       <div class="card-checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox" required />
+        <input type="checkbox" id="checkbox" name="checkbox" />
         <label for="checkbox"
           >I consent to being contacted by the team <span>*</span></label
         >
       </div>
-      <p>To submit this form, please consent to being contacted</p>
+      <p class="text-error">
+        To submit this form, please consent to being contacted
+      </p>
       <button type="submit">Submit</button>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -97,11 +97,15 @@ input:focus {
   border: 1px solid var(--red);
 }
 
-p {
+.text-error {
   font-size: 0.8rem;
   color: var(--red);
   display: none;
   margin-bottom: 0.5rem;
+}
+
+.text-error.show {
+  display: flex;
 }
 /*    ERROR  */
 
